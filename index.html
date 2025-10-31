@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris Explore - Découvrez Paris avec nos guides locaux</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2C3E50;
+            --secondary: #E74C3C;
+            --accent: #F39C12;
+            --light: #ECF0F1;
+            --dark: #34495E;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--primary);
+        }
+
+        .page {
+            display: none;
+            min-height: 100vh;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #C0392B;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .card-content p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--light);
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        .duration {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .profile-header {
+            background: var(--light);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            margin: 0 auto 1rem;
+        }
+
+        .profile-details {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .rating {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: var(--light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .tour-detail-hero {
+            background: var(--light);
+            padding: 3rem 2rem;
+        }
+
+        .tour-detail-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .itinerary {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .itinerary-item {
+            padding: 1rem;
+            border-left: 3px solid var(--accent);
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .booking-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--light);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .legal-page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .legal-page h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .legal-page h3 {
+            color: var(--dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .legal-page p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: none;
+        }
+
+        .cookie-banner.show {
+            display: block;
+        }
+
+        .cookie-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-accept {
+            background: var(--secondary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-decline {
+            background: transparent;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: 1px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .tour-detail-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cookie-content {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <p>Nous utilisons des cookies pour améliorer votre expérience. En continuant, vous acceptez notre politique de cookies. <a href="#" onclick="navigateTo('privacy'); return false;" style="color: var(--accent);">En savoir plus</a></p>
+            <div class="cookie-buttons">
+                <button class="btn-accept" onclick="acceptCookies()">Accepter</button>
+                <button class="btn-decline" onclick="declineCookies()">Refuser</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo" onclick="navigateTo('home')">🗼 Paris Explore</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="navigateTo('home'); return false;">Accueil</a></li>
+                <li><a href="#" onclick="navigateTo('tours'); return false;">Tours</a></li>
+                <li><a href="#" onclick="navigateTo('guides'); return false;">Guides</a></li>
+                <li><a href="#" onclick="navigateTo('contact'); return false;">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <section class="hero">
+            <h1>Découvrez Paris Autrement</h1>
+            <p>Explorez la Ville Lumière avec nos guides locaux passionnés</p>
+            <a href="#" class="cta-button" onclick="navigateTo('tours'); return false;">Voir nos tours</a>
+        </section>
+
+        <div class="container">
+            <h2>Tours Populaires</h2>
+            <div class="grid" id="popularTours"></div>
+
+            <h2 style="margin-top: 3rem;">Guides Recommandés</h2>
+            <div class="grid" id="featuredGuides"></div>
+        </div>
+    </div>
+
+    <!-- TOURS PAGE -->
+    <div id="tours" class="page">
+        <section class="hero">
+            <h1>Nos Tours</h1>
+            <p>Choisissez parmi notre sélection de visites guidées</p>
+        </section>
+        <div class="container">
+            <div class="grid" id="allTours"></div>
+        </div>
+    </div>
+
+    <!-- GUIDES PAGE -->
+    <div id="guides" class="page">
+        <section class="hero">
+            <h1>Nos Guides</h1>
+            <p>Rencontrez nos guides experts et passionnés</p>
+        </section>
+        <div class="container">
+            <div class="grid" id="allGuides"></div>
+        </div>
+    </div>
+
+    <!-- TOUR DETAIL PAGE (Template) -->
+    <div id="tour-detail" class="page">
+        <div class="tour-detail-hero">
+            <div class="container">
+                <h1 id="tourTitle"></h1>
+                <div class="rating" id="tourRating"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="tour-detail-content">
+                <div>
+                    <div class="itinerary">
+                        <h2>Description</h2>
+                        <p id="tourDescription"></p>
+                        
+                        <h3 style="margin-top: 2rem;">Itinéraire</h3>
+                        <div id="tourItinerary"></div>
+
+                        <h3 style="margin-top: 2rem;">Guides disponibles pour ce tour</h3>
+                        <div class="grid" id="tourGuides"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="booking-card">
+                        <div class="price" id="tourPrice"></div>
+                        <p class="duration" id="tourDuration"></p>
+                        <button class="cta-button" style="width: 100%; margin-top: 1rem;">Réserver maintenant</button>
+                        <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">✓ Annulation gratuite<br>✓ Confirmation immédiate<br>✓ Paiement sécurisé</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GUIDE PROFILE PAGE (Template) -->
+    <div id="guide-profile" class="page">
+        <div class="profile-header">
+            <div class="profile-avatar" id="guideAvatar"></div>
+            <h1 id="guideName"></h1>
+            <div class="rating" id="guideRating"></div>
+            <p id="guideTagline"></p>
+        </div>
+        <div class="container">
+            <div class="profile-details">
+                <h2>À propos</h2>
+                <p id="guideBio"></p>
+                
+                <h3 style="margin-top: 2rem;">Langues parlées</h3>
+                <div class="tags" id="guideLanguages"></div>
+
+                <h3 style="margin-top: 2rem;">Spécialités</h3>
+                <div class="tags" id="guideSpecialties"></div>
+            </div>
+
+            <h2 style="margin-top: 3rem;">Tours proposés par ce guide</h2>
+            <div class="grid" id="guideTours"></div>
+        </div>
+    </div>
+
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="page">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <div class="profile-details">
+                <h3>Paris Explore SARL</h3>
+                <p>123 Avenue des Champs-Élysées<br>75008 Paris, France</p>
+                <p>Email: contact@parisexplore.fr<br>Téléphone: +33 1 23 45 67 89</p>
+                <p>Horaires: Lundi - Dimanche, 9h - 19h</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- LEGAL PAGES -->
+    <div id="mentions" class="page">
+        <div class="legal-page">
+            <h2>Mentions Légales</h2>
+            <h3>Éditeur du site</h3>
+            <p>Paris Explore SARL<br>
+            Capital social : 10 000 €<br>
+            RCS Paris B 123 456 789<br>
+            Siège social : 123 Avenue des Champs-Élysées, 75008 Paris<br>
+            Directeur de la publication : Jean Dupont</p>
+
+            <h3>Hébergement</h3>
+            <p>Netlify, Inc.<br>
+            2325 3rd Street, Suite 296<br>
+            San Francisco, California 94107<br>
+            États-Unis</p>
+
+            <h3>Propriété intellectuelle</h3>
+            <p>L'ensemble du contenu de ce site (textes, images, vidéos) est la propriété de Paris Explore ou de ses partenaires. Toute reproduction est interdite sans autorisation préalable.</p>
+
+            <h3>Données personnelles</h3>
+            <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Pour exercer ces droits, contactez-nous à privacy@parisexplore.fr</p>
+        </div>
+    </div>
+
+    <div id="privacy" class="page">
+        <div class="legal-page">
+            <h2>Politique de Confidentialité</h2>
+            <p><em>Dernière mise à jour : Octobre 2025</em></p>
+
+            <h3>1. Responsable du traitement</h3>
+            <p>Paris Explore SARL, 123 Avenue des Champs-Élysées, 75008 Paris, est responsable du traitement de vos données personnelles.</p>
+
+            <h3>2. Données collectées</h3>
+            <p>Nous collectons les données suivantes :</p>
+            <ul>
+                <li>Informations d'identification (nom, prénom, email)</li>
+                <li>Données de réservation (dates, tours sélectionnés)</li>
+                <li>Données de paiement (traitées de manière sécurisée)</li>
+                <li>Données de navigation (cookies, adresse IP)</li>
+            </ul>
+
+            <h3>3. Finalités du traitement</h3>
+            <p>Vos données sont utilisées pour :</p>
+            <ul>
+                <li>Traiter vos réservations</li>
+                <li>Vous envoyer des confirmations et rappels</li>
+                <li>Améliorer nos services</li>
+                <li>Respecter nos obligations légales</li>
+            </ul>
+
+            <h3>4. Base légale</h3>
+            <p>Le traitement de vos données repose sur l'exécution du contrat, notre intérêt légitime, et votre consentement pour les communications marketing.</p>
+
+            <h3>5. Conservation des données</h3>
+            <p>Vos données sont conservées pendant la durée nécessaire aux finalités pour lesquelles elles sont collectées, et conformément aux obligations légales (3 ans pour les données fiscales).</p>
+
+            <h3>6. Vos droits</h3>
+            <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+            <ul>
+                <li>Droit d'accès à vos données</li>
+                <li>Droit de rectification</li>
+                <li>Droit à l'effacement</li>
+                <li>Droit à la limitation du traitement</li>
+                <li>Droit à la portabilité</li>
+                <li>Droit d'opposition</li>
+            </ul>
+            <p>Pour exercer ces droits, contactez privacy@parisexplore.fr</p>
+
+            <h3>7. Cookies</h3>
+            <p>Nous utilisons des cookies pour améliorer votre expérience. Vous pouvez gérer vos préférences via les paramètres de votre navigateur.</p>
+
+            <h3>8. Sécurité</h3>
+            <p>Nous mettons en œuvre des mesures techniques et organisationnelles pour protéger vos données contre tout accès non autorisé.</p>
+
+            <h3>9. Réclamations</h3>
+            <p>Vous avez le droit de déposer une réclamation auprès de la CNIL (www.cnil.fr).</p>
+        </div>
+    </div>
+
+    <div id="terms" class="page">
+        <div class="legal-page">
+            <h2>Conditions Générales d'Utilisation</h2>
+            <p><em>Dernière mise à jour : Octobre 2025</em></p>
+
+            <h3>1. Objet</h3>
+            <p>Les présentes CGU régissent l'utilisation du site Paris Explore et la réservation de visites guidées.</p>
+
+            <h3>2. Services proposés</h3>
+            <p>Paris Explore propose des visites guidées de Paris avec des guides professionnels. Les prestations sont détaillées sur chaque page de tour.</p>
+
+            <h3>3. Inscription et compte</h3>
+            <p>L'utilisation de certains services nécessite la création d'un compte. Vous êtes responsable de la confidentialité de vos identifiants.</p>
+
+            <h3>4. Réservations</h3>
+            <p>Les réservations sont confirmées par email. Le paiement doit être effectué au moment de la réservation. Les tarifs sont indiqués en euros TTC.</p>
+
+            <h3>5. Annulation et remboursement</h3>
+            <p>Annulation gratuite jusqu'à 24h avant le début du tour. Au-delà, aucun remboursement ne sera effectué sauf cas de force majeure.</p>
+
+            <h3>6. Responsabilité</h3>
+            <p>Paris Explore s'engage à fournir des services de qualité mais ne peut être tenu responsable des événements indépendants de sa volonté (intempéries, grèves, etc.).</p>
+
+            <h3>7. Propriété intellectuelle</h3>
+            <p>Tous les contenus du site sont protégés par le droit d'auteur. Toute reproduction est interdite sans autorisation.</p>
+
+            <h3>8. Données personnelles</h3>
+            <p>Voir notre Politique de Confidentialité pour plus d'informations sur le traitement de vos données.</p>
+
+            <h3>9. Modification des CGU</h3>
+            <p>Paris Explore se réserve le droit de modifier les présentes CGU à tout moment. Les utilisateurs seront informés des changements.</p>
+
+            <h3>10. Droit applicable</h3>
+            <p>Les présentes CGU sont régies par le droit français. Tout litige sera soumis aux tribunaux compétents de Paris.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Paris Explore</h4>
+                <p>Votre guide de confiance pour découvrir Paris</p>
+            </div>
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="navigateTo('home'); return false;">Accueil</a></li>
+                    <li><a href="#" onclick="navigateTo('tours'); return false;">Tours</a></li>
+                    <li><a href="#" onclick="navigateTo('guides'); return false;">Guides</a></li>
+                    <li><a href="#" onclick="navigateTo('contact'); return false;">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Légal</h4>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="navigateTo('mentions'); return false;">Mentions légales</a></li>
+                    <li><a href="#" onclick="navigateTo('privacy'); return false;">Confidentialité</a></li>
+                    <li><a href="#" onclick="navigateTo('terms'); return false;">CGU</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: contact@parisexplore.fr<br>Tel: +33 1 23 45 67 89</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p>&copy; 2025 Paris Explore. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Data structure
+        const data = {
+            tours: [
+                {
+                    id: 1,
+                    name: "Tour Eiffel et Champs de Mars",
+                    description: "Découvrez l'histoire fascinante de la Tour Eiffel, symbole de Paris. Profitez d'une vue panoramique exceptionnelle depuis le sommet et explorez les magnifiques Champs de Mars.",
+                    price: 45,
+                    duration: "2h",
+                    rating: 4.8,
+                    emoji: "🗼",
+                    itinerary: [
+                        "Rendez-vous au pied de la Tour Eiffel",
+                        "Histoire et anecdotes sur la construction",
+                        "Montée au 2ème étage (billets inclus)",
+                        "Promenade dans les Champs de Mars",
+                        "Session photos et conseils du guide"
+                    ],
+                    guideIds: [1, 2, 3]
+                },
+                {
+                    id: 2,
+                    name: "Montmartre et Sacré-Cœur",
+                    description: "Plongez dans l'atmosphère bohème de Montmartre, ancien repaire des artistes. Visitez la basilique du Sacré-Cœur et découvrez les ruelles pittoresques du quartier.",
+                    price: 38,
+                    duration: "3h",
+                    rating: 4.9,
+                    emoji: "🎨",
+                    itinerary: [
+                        "Place du Tertre et ses artistes",
+                        "Visite de la basilique du Sacré-Cœur",
+                        "Le Mur des Je t'aime",
+                        "Café des Deux Moulins (Amélie Poulain)",
+                        "Vignobles de Montmartre"
+                    ],
+                    guideIds: [1, 4]
+                },
+                {
+                    id: 3,
+                    name: "Louvre et Tuileries",
+                    description: "Explorez le plus grand musée du monde avec un guide expert. Admirez la Joconde, la Vénus de Milo et les chefs-d'œuvre de la Renaissance, puis promenez-vous dans les jardins des Tuileries.",
+                    price: 65,
+                    duration: "4h",
+                    rating: 4.7,
+                    emoji: "🖼️",
+                    itinerary: [
+                        "Introduction devant la Pyramide",
+                        "Galerie des antiquités égyptiennes",
+                        "La Joconde et la peinture italienne",
+                        "Vénus de Milo et sculpture grecque",
+                        "Jardins des Tuileries"
+                    ],
+                    guideIds: [2, 3]
+                },
+                {
+                    id: 4,
+                    name: "Quartier Latin et Île de la Cité",
+                    description: "Découvrez le cœur historique de Paris. Visitez Notre-Dame, la Sainte-Chapelle et flânez dans les rues médiévales du Quartier Latin, berceau de l'université parisienne.",
+                    price: 42,
+                    duration: "3h",
+                    rating: 4.6,
+                    emoji: "🏛️",
+                    itinerary: [
+                        "Cathédrale Notre-Dame (extérieur)",
+                        "Sainte-Chapelle et ses vitraux",
+                        "Marché aux fleurs",
+                        "Sorbonne et Panthéon",
+                        "Librairie Shakespeare and Company"
+                    ],
+                    guideIds: [3, 4]
+                },
+                {
+                    id: 5,
+                    name: "Croisière sur la Seine",
+                    description: "Admirez Paris depuis la Seine lors d'une croisière commentée. Découvrez les monuments emblématiques de la capitale depuis l'eau, avec champagne et gourmandises.",
+                    price: 55,
+                    duration: "1h30",
+                    rating: 4.5,
+                    emoji: "🚢",
+                    itinerary: [
+                        "Embarquement au Pont Neuf",
+                        "Tour Eiffel vue depuis la Seine",
+                        "Musée d'Orsay et Assemblée Nationale",
+                        "Notre-Dame et Île Saint-Louis",
+                        "Dégustation de champagne"
+                    ],
+                    guideIds: [1, 2]
+                },
+                {
+                    id: 6,
+                    name: "Versailles et ses jardins",
+                    description: "Excursion d'une journée au château de Versailles. Découvrez la galerie des Glaces, les appartements royaux et les magnifiques jardins à la française.",
+                    price: 95,
+                    duration: "6h",
+                    rating: 4.9,
+                    emoji: "👑",
+                    itinerary: [
+                        "Transport depuis Paris",
+                        "Visite du Château et Galerie des Glaces",
+                        "Appartements du Roi et de la Reine",
+                        "Déjeuner dans les jardins",
+                        "Grand et Petit Trianon",
+                        "Retour à Paris"
+                    ],
+                    guideIds: [2, 3, 4]
+                }
+            ],
+            guides: [
+                {
+                    id: 1,
+                    name: "Sophie Martin",
+                    avatar: "👩",
+                    rating: 4.9,
+                    tagline: "Historienne passionnée par Paris",
+                    bio: "Guide officielle depuis 15 ans, j'ai une passion dévorante pour l'histoire de Paris. Diplômée de la Sorbonne en histoire de l'art, je vous ferai découvrir les secrets et anecdotes de notre belle capitale. Mes tours sont vivants, interactifs et adaptés à tous les âges.",
+                    languages: ["Français", "Anglais", "Espagnol"],
+                    specialties: ["Histoire", "Architecture", "Photographie"],
+                    tourIds: [1, 2, 5]
+                },
+                {
+                    id: 2,
+                    name: "Marc Dubois",
+                    avatar: "👨",
+                    rating: 4.8,
+                    tagline: "Parisien de naissance, guide par passion",
+                    bio: "Né et élevé à Paris, je connais cette ville comme ma poche. Ancien professeur d'histoire, j'ai décidé de partager ma passion pour Paris avec les visiteurs du monde entier. Je privilégie les petits groupes pour une expérience plus personnelle et authentique.",
+                    languages: ["Français", "Anglais", "Italien"],
+                    specialties: ["Histoire", "Gastronomie", "Culture"],
+                    tourIds: [1, 3, 5, 6]
+                },
+                {
+                    id: 3,
+                    name: "Isabella Rossi",
+                    avatar: "👩",
+                    rating: 4.7,
+                    tagline: "Amoureuse de l'art et de Paris",
+                    bio: "Italienne installée à Paris depuis 20 ans, je suis historienne de l'art spécialisée dans la Renaissance. Mes visites au Louvre sont particulièrement appréciées pour ma capacité à rendre l'art accessible et passionnant. Je parle couramment quatre langues.",
+                    languages: ["Français", "Italien", "Anglais", "Allemand"],
+                    specialties: ["Art", "Musées", "Renaissance"],
+                    tourIds: [1, 3, 4, 6]
+                },
+                {
+                    id: 4,
+                    name: "Pierre Lefevre",
+                    avatar: "👨",
+                    rating: 4.9,
+                    tagline: "Guide et photographe professionnel",
+                    bio: "Photographe professionnel et guide certifié, je combine mes deux passions pour vous offrir des tours uniques. Je vous emmène dans les meilleurs spots photo de Paris et vous donne des conseils pour capturer la magie de la ville. Parfait pour les amateurs de photographie!",
+                    languages: ["Français", "Anglais"],
+                    specialties: ["Photographie", "Architecture", "Quartiers cachés"],
+                    tourIds: [2, 4, 6]
+                }
+            ]
+        };
+
+        // Navigation function
+        function navigateTo(page, id = null) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(page).classList.add('active');
+            window.scrollTo(0, 0);
+
+            if (page === 'tour-detail' && id) {
+                loadTourDetail(id);
+            } else if (page === 'guide-profile' && id) {
+                loadGuideProfile(id);
+            } else if (page === 'home') {
+                loadHomePage();
+            } else if (page === 'tours') {
+                loadToursPage();
+            } else if (page === 'guides') {
+                loadGuidesPage();
+            }
+        }
+
+        // Load home page
+        function loadHomePage() {
+            const popularTours = document.getElementById('popularTours');
+            popularTours.innerHTML = data.tours.slice(0, 3).map(tour => createTourCard(tour)).join('');
+
+            const featuredGuides = document.getElementById('featuredGuides');
+            featuredGuides.innerHTML = data.guides.slice(0, 3).map(guide => createGuideCard(guide)).join('');
+        }
+
+        // Load tours page
+        function loadToursPage() {
+            const allTours = document.getElementById('allTours');
+            allTours.innerHTML = data.tours.map(tour => createTourCard(tour)).join('');
+        }
+
+        // Load guides page
+        function loadGuidesPage() {
+            const allGuides = document.getElementById('allGuides');
+            allGuides.innerHTML = data.guides.map(guide => createGuideCard(guide)).join('');
+        }
+
+        // Create tour card
+        function createTourCard(tour) {
+            return `
+                <div class="card" onclick="navigateTo('tour-detail', ${tour.id})">
+                    <div class="card-image">${tour.emoji}</div>
+                    <div class="card-content">
+                        <h3>${tour.name}</h3>
+                        <p>${tour.description.substring(0, 100)}...</p>
+                        <div class="card-meta">
+                            <span class="price">${tour.price}€</span>
+                            <span class="duration">⏱️ ${tour.duration}</span>
+                        </div>
+                        <div class="rating">⭐ ${tour.rating}/5</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Create guide card
+        function createGuideCard(guide) {
+            return `
+                <div class="card" onclick="navigateTo('guide-profile', ${guide.id})">
+                    <div class="card-image" style="font-size: 6rem;">${guide.avatar}</div>
+                    <div class="card-content">
+                        <h3>${guide.name}</h3>
+                        <p>${guide.tagline}</p>
+                        <div class="rating">⭐ ${guide.rating}/5</div>
+                        <div class="tags" style="margin-top: 1rem;">
+                            ${guide.languages.slice(0, 2).map(lang => `<span class="tag">${lang}</span>`).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Load tour detail
+        function loadTourDetail(tourId) {
+            const tour = data.tours.find(t => t.id === tourId);
+            if (!tour) return;
+
+            document.getElementById('tourTitle').textContent = tour.name;
+            document.getElementById('tourRating').textContent = `⭐ ${tour.rating}/5`;
+            document.getElementById('tourDescription').textContent = tour.description;
+            document.getElementById('tourPrice').textContent = `${tour.price}€`;
+            document.getElementById('tourDuration').textContent = `⏱️ Durée: ${tour.duration}`;
+
+            const itineraryHTML = tour.itinerary.map(item => 
+                `<div class="itinerary-item">📍 ${item}</div>`
+            ).join('');
+            document.getElementById('tourItinerary').innerHTML = itineraryHTML;
+
+            const tourGuidesHTML = tour.guideIds
+                .map(id => data.guides.find(g => g.id === id))
+                .filter(g => g)
+                .map(guide => createGuideCard(guide))
+                .join('');
+            document.getElementById('tourGuides').innerHTML = tourGuidesHTML;
+        }
+
+        // Load guide profile
+        function loadGuideProfile(guideId) {
+            const guide = data.guides.find(g => g.id === guideId);
+            if (!guide) return;
+
+            document.getElementById('guideAvatar').textContent = guide.avatar;
+            document.getElementById('guideName').textContent = guide.name;
+            document.getElementById('guideRating').textContent = `⭐ ${guide.rating}/5`;
+            document.getElementById('guideTagline').textContent = guide.tagline;
+            document.getElementById('guideBio').textContent = guide.bio;
+
+            const languagesHTML = guide.languages.map(lang => 
+                `<span class="tag">🗣️ ${lang}</span>`
+            ).join('');
+            document.getElementById('guideLanguages').innerHTML = languagesHTML;
+
+            const specialtiesHTML = guide.specialties.map(spec => 
+                `<span class="tag">✨ ${spec}</span>`
+            ).join('');
+            document.getElementById('guideSpecialties').innerHTML = specialtiesHTML;
+
+            const guideToursHTML = guide.tourIds
+                .map(id => data.tours.find(t => t.id === id))
+                .filter(t => t)
+                .map(tour => createTourCard(tour))
+                .join('');
+            document.getElementById('guideTours').innerHTML = guideToursHTML;
+        }
+
+        // Cookie management
+        function checkCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookieBanner').classList.add('show');
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.remove('show');
+        }
+
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            document.getElementById('cookieBanner').classList.remove('show');
+        }
+
+        // Initialize
+        window.addEventListener('DOMContentLoaded', () => {
+            loadHomePage();
+            checkCookieConsent();
+        });
+    </script>
+</body>
+</html>
