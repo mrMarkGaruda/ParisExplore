@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toutes nos Visites | Paris Explore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="tours">
+    <div data-component="modal"></div>
+    <div data-component="header"></div>
+
+    <main>
+        <section class="hero" style="background-image: linear-gradient(rgba(28, 40, 51, 0.75), rgba(28, 40, 51, 0.75)), url('https://placehold.co/1600x600/1C2833/FFFFFF?text=Tour+Page+Hero');">
+            <h1>La Collection Complète des Tours Paris Explore</h1>
+            <p>Filtrez nos expériences par thème, durée ou prix pour trouver l'aventure parfaite.</p>
+        </section>
+
+        <div class="container">
+            <div class="controls-bar">
+                <label for="sort-select">Trier par&nbsp;:</label>
+                <select id="sort-select">
+                    <option value="rating-desc">Meilleure note (desc)</option>
+                    <option value="price-asc">Prix (asc)</option>
+                    <option value="duration-asc">Durée (asc)</option>
+                    <option value="name-asc">Nom (A-Z)</option>
+                </select>
+
+                <label for="filter-theme">Filtrer par thème&nbsp;:</label>
+                <select id="filter-theme">
+                    <option value="all">Tous les thèmes</option>
+                    <option value="Art & Musées">Art &amp; Musées</option>
+                    <option value="Histoire & Architecture">Histoire &amp; Architecture</option>
+                    <option value="Gastronomie">Gastronomie</option>
+                    <option value="Insolite & Secret">Insolite &amp; Secret</option>
+                </select>
+
+                <span id="tourCountDisplay" style="font-size: 0.9rem; color: var(--text-secondary);">Chargement des tours…</span>
+            </div>
+
+            <div class="grid" id="allTours"></div>
+        </div>
+    </main>
+
+    <div data-component="footer"></div>
+
+    <script type="module" src="js/layout.js"></script>
+    <script type="module" src="js/pages/tours.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités | Paris Explore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="news">
+    <div data-component="modal"></div>
+    <div data-component="header"></div>
+
+    <main>
+        <div class="container">
+            <h1>Actualités et Histoires Parisiennes</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Notre blog pour les mises à jour sur Notre-Dame, les événements culturels et des anecdotes de nos guides.</p>
+            <div class="grid" id="newsGrid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));"></div>
+        </div>
+    </main>
+
+    <div data-component="footer"></div>
+
+    <script type="module" src="js/layout.js"></script>
+    <script type="module" src="js/pages/news.js"></script>
+</body>
+</html>

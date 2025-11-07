@@ -3,240 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paris Explore - Visites Guidées Premium de la Ville Lumière</title>
-    <!-- Professional Google Fonts for Modernity and Elegance -->
+    <title>Paris Explore | Visites Privées d'Exception</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* CSS Reset & Variables (Refined Palette) */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+    <div data-component="modal"></div>
+    <div data-component="header"></div>
 
-        :root {
-            --primary: #1C2833; /* Deep Charcoal Blue (Navigation, Text) */
-            --secondary: #A0522D; /* Modern Sienna/Earth Tone (Accent CTAs, Luxury) */
-            --accent: #F39C12; /* Goldenrod (Highlights, Ratings) */
-            --light: #F8F9F9; /* Off-White Background */
-            --dark: #34495E; /* Dark Blue Gray */
-            --text-main: #212529;
-            --text-secondary: #6C757D;
-            --border-color: #DEE2E6;
-        }
+    <main>
+        <section class="hero">
+            <h1>Paris Explore&nbsp;: L'excellence du voyage personnalisé</h1>
+            <p>Depuis <strong>2005</strong>, nous imaginons des expériences privées autour de Notre-Dame et des quartiers iconiques de la capitale.</p>
+            <a class="cta-button" href="tours.html">Découvrir les tours signature</a>
+        </section>
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.7;
-            color: var(--text-main);
-            background-color: var(--light);
-            transition: opacity 0.3s ease-in-out;
-        }
-        
-        /* Global Typography and Elements */
-        h1, h2, h3 {
-            font-family: 'Lora', serif;
-            font-weight: 700;
-            color: var(--primary);
-            line-height: 1.2;
-        }
+        <div class="container">
+            <h2>L'engagement Paris Explore</h2>
+            <p class="intro-text text-center">Chaque visite est conçue pour offrir une immersion hors des sentiers battus. Des historiens de l'art, des spécialistes du patrimoine et des chefs passionnés donnent vie à la Ville Lumière.</p>
 
-        h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1rem; }
-        h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1.5rem; padding-bottom: 0.5rem; }
-        h3 { font-size: clamp(1.3rem, 3vw, 1.8rem); margin-bottom: 1rem; }
-        p { margin-bottom: 1rem; }
+            <div class="grid grid-spacing">
+                <div class="card card-static">
+                    <div class="card-image" aria-hidden="true">🏛️</div>
+                    <div class="card-content">
+                        <h3>Guides conférenciers experts</h3>
+                        <p class="text-emphasis">Une équipe certifiée et multilingue qui maîtrise l'art du storytelling historique.</p>
+                        <p class="text-small">Chaque guide suit un programme annuel axé sur les dernières découvertes patrimoniales.</p>
+                    </div>
+                </div>
+                <div class="card card-static">
+                    <div class="card-image" aria-hidden="true">🔒</div>
+                    <div class="card-content">
+                        <h3>Réservation sécurisée</h3>
+                        <p class="text-emphasis">Paiement protégé, confirmation instantanée et support conciergerie 7j/7.</p>
+                        <p class="text-small">Politique flexible jusqu'à J-24&nbsp;h pour toutes les expériences privées.</p>
+                    </div>
+                </div>
+                <div class="card card-static">
+                    <div class="card-image" aria-hidden="true">✨</div>
+                    <div class="card-content">
+                        <h3>Tours sur mesure</h3>
+                        <p class="text-emphasis">Adaptation complète selon votre groupe, vos thématiques et votre timing.</p>
+                        <p class="text-small">Team building, voyages d'exception ou programmes culturels&nbsp;: nos conseillers dédiés s'occupent de tout.</p>
+                    </div>
+                </div>
+            </div>
 
-        /* --- Structure & Layout --- */
-        .page {
-            display: none;
-            min-height: calc(100vh - 80px); 
-            padding-top: 80px; 
-            animation: fadeIn 0.5s ease-out;
-        }
+            <h2 class="section-spacing">Nos meilleures notes (4.9⭐)</h2>
+            <div class="grid" id="popularTours"></div>
 
-        .page.active {
-            display: block;
-        }
+            <div class="section-cta">
+                <a class="secondary-button" href="tours.html">Voir toutes les expériences</a>
+            </div>
+        </div>
+    </main>
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    <div data-component="footer"></div>
 
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 3rem clamp(1rem, 5vw, 2.5rem);
-        }
-        
-        /* --- Header & Navigation --- */
-        header {
-            background: var(--primary);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
+    <script type="module" src="js/layout.js"></script>
+    <script type="module" src="js/pages/home.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris Explore | Visites Privées d'Exception</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+    <div data-component="modal"></div>
+    <div data-component="header"></div>
 
-        nav {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 0 clamp(1rem, 5vw, 2.5rem);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    <main>
+        <section class="hero">
+            <h1>Paris Explore&nbsp;: L'excellence du voyage personnalisé</h1>
+            <p>Depuis <strong>2005</strong>, nous imaginons des expériences privées autour de Notre-Dame et des quartiers iconiques de la capitale.</p>
+            <a class="cta-button" href="tours.html">Découvrir les tours signature</a>
+        </section>
 
-        .logo {
-            font-size: clamp(1.4rem, 4vw, 1.8rem);
-            font-weight: 700;
-            cursor: pointer;
-            color: white;
-            letter-spacing: 0.5px;
-        }
+        <div class="container">
+            <h2>L'engagement Paris Explore</h2>
+            <p class="intro-text text-center">Chaque visite est conçue pour offrir une immersion hors des sentiers battus. Des historiens de l'art, des spécialistes du patrimoine et des chefs passionnés donnent vie à la Ville Lumière.</p>
 
-        .nav-links {
-            display: flex;
-            gap: clamp(1rem, 4vw, 2.5rem);
-            list-style: none;
-        }
+            <div class="grid grid-spacing">
+                <div class="card card-static">
+                    <div class="card-image" aria-hidden="true">🏛️</div>
+                    <div class="card-content">
+                        <h3>Guides conférenciers experts</h3>
+                        <p class="text-emphasis">Une équipe certifiée et multilingue qui maîtrise l'art du storytelling historique.</p>
+                        <p class="text-small">Chaque guide suit un programme annuel axé sur les dernières découvertes patrimoniales.</p>
+                    </div>
+                </div>
+                <div class="card card-static">
+                    <div class="card-image" aria-hidden="true">🔒</div>
+                    <div class="card-content">
+                        <h3>Réservation sécurisée</h3>
+                        <p class="text-emphasis">Paiement protégé, confirmation instantanée et support conciergerie 7j/7.</p>
+                        <p class="text-small">Politique flexible jusqu'à J-24&nbsp;h pour toutes les expériences privées.</p>
+                    </div>
+                </div>
+                <div class="card card-static">
+                    <div class="card-image" aria-hidden="true">✨</div>
+                    <div class="card-content">
+                        <h3>Tours sur mesure</h3>
+                        <p class="text-emphasis">Adaptation complète selon votre groupe, vos thématiques et votre timing.</p>
+                        <p class="text-small">Team building, voyages d'exception ou programmes culturels&nbsp;: nos conseillers dédiés s'occupent de tout.</p>
+                    </div>
+                </div>
+            </div>
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.5rem 0;
-            position: relative;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover, .nav-links a.active-link {
-            color: var(--accent);
-        }
+            <h2 class="section-spacing">Nos meilleures notes (4.9⭐)</h2>
+            <div class="grid" id="popularTours"></div>
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 3px;
-            background: var(--secondary);
-            transition: width 0.3s ease;
-        }
+            <div class="section-cta">
+                <a class="secondary-button" href="tours.html">Voir toutes les expériences</a>
+            </div>
+        </div>
+    </main>
 
-        .nav-links a.active-link::after {
-            width: 100%;
-        }
-        
-        /* User Info Box (For Legitimacy) */
-        .user-info {
-            font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.7);
-            padding-left: 1rem;
-            border-left: 1px solid rgba(255, 255, 255, 0.2);
-            margin-left: 1rem;
-        }
+    <div data-component="footer"></div>
 
-        /* --- Buttons & CTAs --- */
-        .cta-button {
-            background: var(--secondary);
-            color: white;
-            padding: 0.9rem 2.2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .cta-button:hover {
-            background: #8B4513; /* Darker Sienna */
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
-
-        .secondary-button {
-            background: transparent;
-            color: var(--secondary);
-            border: 2px solid var(--secondary);
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        .secondary-button:hover {
-            background: var(--secondary);
-            color: white;
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            background: linear-gradient(rgba(28, 40, 51, 0.75), rgba(28, 40, 51, 0.75)), url('https://placehold.co/1600x600/1C2833/FFFFFF?text=Luxe+Paris+View') center center/cover no-repeat;
-            color: white;
-            padding: 8rem 2rem;
-            text-align: center;
-            min-height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: -80px;
-        }
-        
-        .hero h1 { color: white; text-shadow: 0 3px 5px rgba(0,0,0,0.4); }
-
-        .hero p { font-size: 1.3rem; margin-bottom: 3rem; font-family: 'Lora', serif; max-width: 800px; opacity: 0.9; }
-
-        /* --- Grid & Cards --- */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-top: 2.5rem;
-        }
-
-        .card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid var(--border-color);
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-
-        .card-image {
-            width: 100%;
-            height: 200px;
-            background: var(--dark);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    <script type="module" src="js/layout.js"></script>
+    <script type="module" src="js/pages/home.js"></script>
+</body>
+</html>
             font-size: 4rem;
         }
 

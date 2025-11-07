@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails de la visite | Paris Explore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="tours">
+    <div data-component="modal"></div>
+    <div data-component="header"></div>
+
+    <main>
+        <div class="tour-detail">
+            <section class="tour-hero container">
+                <h1 id="tourTitle">Visite de Notre-Dame</h1>
+                <p id="tourTagline" class="lead">Découvrez les secrets de la cathédrale avec nos experts.</p>
+                <div id="tourRating" class="rating" style="margin-top: 1rem;"></div>
+            </section>
+
+            <section class="tour-content container">
+                <div class="tour-main">
+                    <div class="tour-meta">
+                        <div class="price">
+                            <span>Tarif</span>
+                            <strong id="tourPrice">120€</strong>
+                        </div>
+                        <div class="duration" id="tourDuration">Durée estimée: 2h30</div>
+                    </div>
+                    <p id="tourDescription" class="tour-description">Chargement de la description...</p>
+
+                    <div class="info-panels">
+                        <div>
+                            <h2>Inclus</h2>
+                            <ul id="tourInclusions"></ul>
+                        </div>
+                        <div>
+                            <h2>Non inclus</h2>
+                            <ul id="tourExclusions"></ul>
+                        </div>
+                    </div>
+
+                    <section>
+                        <h2>Itinéraire détaillé</h2>
+                        <div id="tourItinerary" class="itinerary"></div>
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h2>Avis voyageurs</h2>
+                            <span id="reviewCount" class="badge">0</span>
+                        </div>
+                        <div id="tourReviews" class="reviews-grid"></div>
+                    </section>
+                </div>
+
+                <aside class="tour-sidebar">
+                    <div class="booking-card">
+                        <h2>Réserver cette expérience</h2>
+                        <label for="bookingDate">Date souhaitée</label>
+                        <input type="date" id="bookingDate" name="bookingDate">
+
+                        <label for="bookingPax">Nombre de participants</label>
+                        <input type="number" id="bookingPax" name="bookingPax" min="1" value="2">
+
+                        <button id="bookingButton" class="btn-primary" type="button">Demander une réservation</button>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 1rem;">Simulation : aucune transaction réelle n'est effectuée.</p>
+                    </div>
+
+                    <div class="guides-card">
+                        <h2>Guides disponibles</h2>
+                        <div id="tourGuides" class="guides-list"></div>
+                    </div>
+                </aside>
+            </section>
+        </div>
+    </main>
+
+    <div data-component="footer"></div>
+
+    <script type="module" src="js/layout.js"></script>
+    <script type="module" src="js/pages/tour-detail.js"></script>
+</body>
+</html>

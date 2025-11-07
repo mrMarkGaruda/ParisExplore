@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Notre-Dame: Les Avancées du Chantier et Notre Tour Spécial",
+    "date": "20 Septembre 2025",
+    "category": "Histoire",
+    "content": "Avec l'approche de la réouverture, nous avons mis à jour notre Tour Île de la Cité pour inclure une visite virtuelle unique du chantier. Une exclusivité Paris Explore."
+  },
+  {
+    "id": 2,
+    "title": "Guide Spotlight: Rencontrez Marc Dubois, notre expert Gastronomie",
+    "date": "10 Septembre 2025",
+    "category": "Équipe",
+    "content": "Découvrez le parcours de Marc, le guide derrière nos tours Marais Gourmand et Dégustation de Vins. Ses secrets sur le meilleur falafel de Paris révélés!"
+  },
+  {
+    "id": 3,
+    "title": "Saison Hivernale: Conseils pour Visiter Versailles",
+    "date": "28 Août 2025",
+    "category": "Conseils",
+    "content": "Moins de foule et des jardins magnifiques sous la brume. Nos meilleurs conseils pour profiter du Château de Versailles en basse saison."
+  },
+  {
+    "id": 4,
+    "title": "Nouveau Tour: Street Art de Belleville est arrivé!",
+    "date": "15 Août 2025",
+    "category": "Nouveauté",
+    "content": "Explorez le côté moderne et vibrant de Paris avec notre guide Lucie Vidal. Réservez vite, les places partent rapidement!"
+  }
+]

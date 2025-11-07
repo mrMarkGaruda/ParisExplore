@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Sophie Martin",
+    "avatar": "👩",
+    "rating": 4.9,
+    "tagline": "Historienne de l'Art et Experte du Louvre.",
+    "bio": "Diplômée de la Sorbonne en histoire de l'art, Sophie est spécialisée dans la Renaissance. Son calme et son savoir encyclopédique sont très appréciés. Elle est le pilier de nos visites de musées.",
+    "languages": ["Français (Natif)", "Anglais (Bilingue)", "Italien (Courant)"],
+    "specialties": ["Art & Musées", "Renaissance", "Histoire"],
+    "tourIds": [1, 3, 5, 8, 14]
+  },
+  {
+    "id": 2,
+    "name": "Marc Dubois",
+    "avatar": "👨",
+    "rating": 4.8,
+    "tagline": "L'Expert des Quartiers Insolites et de la Gastronomie.",
+    "bio": "Ancien professeur d'histoire-géographie, Marc est le guide idéal pour les visites gourmandes. Il a une connaissance intime de l'évolution urbaine de Paris et des meilleurs adresses pour les pauses.",
+    "languages": ["Français (Natif)", "Anglais (Courant)", "Allemand (Courant)"],
+    "specialties": ["Gastronomie", "Architecture", "Insolite"],
+    "tourIds": [2, 5, 7, 9, 15]
+  },
+  {
+    "id": 3,
+    "name": "Isabella Rossi",
+    "avatar": "👩",
+    "rating": 4.7,
+    "tagline": "Spécialiste du Grand Siècle et de Versailles.",
+    "bio": "Italienne, Isabella a une passion dévorante pour la monarchie française et la vie de cour. Elle vous transporte au temps de Louis XIV avec une énergie contagieuse. Elle est notre référence pour les excursions hors de Paris.",
+    "languages": ["Français (Bilingue)", "Italien (Natif)", "Anglais (Courant)"],
+    "specialties": ["Versailles", "Monarchie", "Musées"],
+    "tourIds": [3, 4, 6]
+  },
+  {
+    "id": 4,
+    "name": "Pierre Lefevre",
+    "avatar": "👨",
+    "rating": 4.9,
+    "tagline": "Guide & Photographe Professionnel.",
+    "bio": "Pierre allie sa certification de guide conférencier à son métier de photographe. Il vous révèle les meilleurs angles et moments pour capturer la beauté de Paris. Parfait pour le tour Montmartre ou Opéra Garnier.",
+    "languages": ["Français (Natif)", "Anglais (Bilingue)", "Espagnol (Courant)"],
+    "specialties": ["Photographie", "Architecture", "Montmartre"],
+    "tourIds": [2, 4, 7, 11]
+  },
+  {
+    "id": 5,
+    "name": "Amélie Dupont",
+    "avatar": "👩",
+    "rating": 4.8,
+    "tagline": "La Voix de la Tour Eiffel et des Histoires Secrètes.",
+    "bio": "Amélie adore partager les petites histoires que les livres oublient. Elle rend les tours de monuments populaires vivants et inattendus. Son dynamisme est très apprécié des familles.",
+    "languages": ["Français (Natif)", "Anglais (Bilingue)", "Japonais (Notions)"],
+    "specialties": ["Tour Eiffel", "Histoires Secrètes", "Louvre"],
+    "tourIds": [1, 3, 6]
+  },
+  {
+    "id": 6,
+    "name": "Youssef Benali",
+    "avatar": "👨",
+    "rating": 4.6,
+    "tagline": "Expert du Marais, des cultures et de la Pâtisserie.",
+    "bio": "Youssef se spécialise dans les quartiers Est et la gastronomie. Ses visites du Marais sont un voyage culinaire et historique. Il anime aussi notre très populaire atelier Macarons.",
+    "languages": ["Français (Natif)", "Anglais (Courant)", "Arabe (Natif)"],
+    "specialties": ["Gastronomie", "Culture Locale", "Pâtisserie"],
+    "tourIds": [2, 5, 10, 15]
+  },
+  {
+    "id": 7,
+    "name": "Chloé Moreau",
+    "avatar": "👩",
+    "rating": 4.7,
+    "tagline": "Spécialiste de l'Archéologie et des Racines de Lutèce.",
+    "bio": "Archéologue de formation, Chloé vous emmènera aux racines de Lutèce. Ses connaissances des fondations de Paris sont immenses. Ses tours sont rigoureux et fascinants. Elle est notre experte pour les Catacombes.",
+    "languages": ["Français (Natif)", "Anglais (Courant)", "Russe (Courant)"],
+    "specialties": ["Archéologie", "Catacombes", "Histoire"],
+    "tourIds": [1, 4, 6, 13]
+  },
+  {
+    "id": 8,
+    "name": "Lucie Vidal",
+    "avatar": "👩",
+    "rating": 4.5,
+    "tagline": "L'Exploratrice de l'Art Urbain et de l'Histoire Macabre.",
+    "bio": "Lucie est notre guide la plus jeune et la plus branchée. Elle vous fera découvrir le Paris alternatif de Belleville et les sombres secrets des Catacombes. Elle est spécialisée dans la culture contemporaine.",
+    "languages": ["Français (Natif)", "Anglais (Bilingue)"],
+    "specialties": ["Street Art", "Catacombes", "Culture Urbaine"],
+    "tourIds": [12, 13]
+  },
+  {
+    "id": 9,
+    "name": "Thierry Leroy",
+    "avatar": "👨",
+    "rating": 4.8,
+    "tagline": "Architecte retraité, Maître des Passages et Opéra Garnier.",
+    "bio": "Thierry a passé sa vie à étudier l'architecture parisienne. Il partage avec passion les détails structurels et les secrets de conception des grands monuments du 19e siècle. Un guide très apprécié pour son élégance et sa précision.",
+    "languages": ["Français (Natif)", "Anglais (Courant)"],
+    "specialties": ["Architecture", "19e Siècle", "Détails Techniques"],
+    "tourIds": [11, 12]
+  },
+  {
+    "id": 10,
+    "name": "Alain Giraud",
+    "avatar": "👨",
+    "rating": 4.7,
+    "tagline": "Philosophe et guide du Quartier Latin.",
+    "bio": "Alain est un ancien professeur de philosophie à la Sorbonne. Ses visites du Quartier Latin sont des voyages intellectuels, explorant l'histoire de la pensée française. Idéal pour les passionnés d'histoire intellectuelle.",
+    "languages": ["Français (Natif)", "Anglais (Courant)", "Espagnol (Courant)"],
+    "specialties": ["Philosophie", "Quartier Latin", "Histoire Intellectuelle"],
+    "tourIds": [10, 14]
+  }
+]

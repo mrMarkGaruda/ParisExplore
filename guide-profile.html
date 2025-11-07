@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil du guide | Paris Explore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="guides">
+    <div data-component="modal"></div>
+    <div data-component="header"></div>
+
+    <main>
+        <div class="guide-profile container">
+            <section class="guide-header">
+                <div class="guide-avatar" id="guideAvatar" aria-hidden="true">👤</div>
+                <div>
+                    <h1 id="guideName">Nom du guide</h1>
+                    <p id="guideTagline" class="lead">Expert en patrimoine gothique</p>
+                    <div id="guideRating" class="rating"></div>
+                </div>
+            </section>
+
+            <section class="guide-details">
+                <div>
+                    <h2>À propos</h2>
+                    <p id="guideBio">Chargement de la biographie...</p>
+                </div>
+                <div>
+                    <h2>Langues parlées</h2>
+                    <div id="guideLanguages" class="tag-list"></div>
+                </div>
+                <div>
+                    <h2>Spécialités</h2>
+                    <div id="guideSpecialties" class="tag-list"></div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Tours animés par ce guide</h2>
+                <div id="guideTours" class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));"></div>
+            </section>
+        </div>
+    </main>
+
+    <div data-component="footer"></div>
+
+    <script type="module" src="js/layout.js"></script>
+    <script type="module" src="js/pages/guide-profile.js"></script>
+</body>
+</html>

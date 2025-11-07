@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Paris Explore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="contact">
+    <div data-component="modal"></div>
+    <div data-component="header"></div>
+
+    <main>
+        <div class="container">
+            <h1>Contactez notre équipe</h1>
+            <div class="contact-grid">
+                <form id="contactForm" class="contact-form">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+
+                    <label for="email">Adresse e-mail professionnelle</label>
+                    <input type="email" id="email" name="email" placeholder="nom@entreprise.com" required>
+
+                    <label for="company">Organisation</label>
+                    <input type="text" id="company" name="company" placeholder="Agence, hôtel, institution...">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Parlez-nous de votre projet."></textarea>
+
+                    <button type="submit" class="btn-primary">Envoyer ma demande</button>
+                </form>
+
+                <section class="contact-details">
+                    <h2>Vous préférez échanger autrement ?</h2>
+                    <ul>
+                        <li><strong>Téléphone :</strong> +33 1 23 45 67 89</li>
+                        <li><strong>Email :</strong> pro@parisexplore.fr</li>
+                        <li><strong>Adresse :</strong> 12 rue des Archives, 75004 Paris</li>
+                    </ul>
+                    <p style="margin-top: 2rem;">Nous accompagnons les agences de voyage, entreprises et institutions culturelles pour créer des expériences uniques à Notre-Dame et dans le centre historique de Paris.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div data-component="footer"></div>
+
+    <script type="module" src="js/layout.js"></script>
+    <script type="module" src="js/pages/contact.js"></script>
+</body>
+</html>
