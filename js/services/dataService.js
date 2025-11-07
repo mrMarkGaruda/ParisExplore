@@ -1,18 +1,32 @@
+import { STATIC_TOURS, STATIC_GUIDES, STATIC_NEWS } from './staticData.js';
+
 const cache = new Map();
+const STATIC_DATA_BY_PATH = {
+    'data/tours.json': STATIC_TOURS,
+    'data/guides.json': STATIC_GUIDES,
+    'data/news.json': STATIC_NEWS
+};
 
 async function fetchJson(path) {
     if (!cache.has(path)) {
-        cache.set(path, fetch(path)
-            .then((response) => {
+        cache.set(path, (async () => {
+            try {
+                const response = await fetch(path);
                 if (!response.ok) {
                     throw new Error(`Échec du chargement de ${path}: ${response.status}`);
                 }
-                return response.json();
-            })
-            .catch((error) => {
+                return await response.json();
+            } catch (error) {
+                const isLocalFile = typeof window !== 'undefined' && window.location?.protocol === 'file:';
+                const fallbackData = STATIC_DATA_BY_PATH[path];
+                if (isLocalFile && fallbackData) {
+                    console.warn(`Chargement hors-ligne des données "${path}".`);
+                    return JSON.parse(JSON.stringify(fallbackData));
+                }
                 console.error(error);
                 throw error;
-            }));
+            }
+        })());
     }
     return cache.get(path);
 }
