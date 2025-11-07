@@ -1,14 +1,10 @@
-import { initializeFirebase } from './services/firebase.js';
 import { setupModal } from './modal.js';
 
 const STATIC_PARTIALS = {
     header: `
 <header>
     <nav>
-        <div style="display: flex; align-items: center;">
-            <a class="logo" href="index.html">🇫🇷 Paris Explore</a>
-            <div class="user-info" id="userInfoDisplay">Authentifié: Non (Anonyme)</div>
-        </div>
+        <a class="logo" href="index.html">🇫🇷 Paris Explore</a>
         <ul class="nav-links">
             <li><a href="index.html" class="nav-link" data-page="home">Accueil</a></li>
             <li><a href="about.html" class="nav-link" data-page="about">Notre Histoire</a></li>
@@ -115,10 +111,8 @@ async function setupLayout() {
     setupModal();
     highlightActiveLink(header);
 
-    if (header) {
-        const userInfoElement = header.querySelector('#userInfoDisplay');
-        await initializeFirebase(userInfoElement);
-    }
+    // Firebase removed - not needed for static site
+    // User info display kept for potential future use
 }
 
 export const layoutReady = setupLayout().catch((error) => {
