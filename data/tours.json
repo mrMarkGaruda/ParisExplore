@@ -1,447 +1,408 @@
 [
   {
     "id": 1,
-    "name": "Tour Eiffel: L'Ascension des Lumières",
-    "tagline": "Accès prioritaire. L'histoire et la vue panoramique ultime.",
-    "description": "Plongez dans l'histoire de la Tour Eiffel pour l'Exposition Universelle de 1889. Votre guide vous racontera les anecdotes et les défis techniques, avec un accès rapide au 2ème étage pour une vue imprenable sur Paris. Un incontournable revisité par nos historiens.",
-    "price": 49,
-    "duration": 150,
+    "name": "1er Arrondissement — Le Cœur Royal de Paris",
+    "tagline": "Du Louvre à la Place Vendôme, parcourez l'histoire royale et l'élégance intemporelle.",
+    "description": "Découvrez le Paris royal avec ses monuments emblématiques. De la Pyramide du Louvre aux jardins des Tuileries, en passant par la majestueuse Place Vendôme, cette visite vous plonge dans l'histoire des rois de France. Le Petit Plus : une « Chasse au trésor royale » interactive via QR codes.",
+    "price": 45,
+    "duration": 180,
     "rating": 4.9,
     "theme": "Histoire & Architecture",
-    "emoji": "🗼",
-    "guideIds": [1, 5, 7],
-    "reviews": [
-      { "name": "Charles D.", "rating": 5, "text": "Le guide Marc était incroyable. La meilleure partie du voyage!" },
-      { "name": "Emma B.", "rating": 5, "text": "Skip-the-line est indispensable. Super bien organisé." },
-      { "name": "Liam K.", "rating": 4, "text": "Légèrement trop de monde, mais la vue valait le coup." }
-    ],
-    "inclusions": [
-      "Billet coupe-file pour les monuments",
-      "Guide conférencier certifié",
-      "Petit groupe (max 12 personnes)"
-    ],
-    "exclusions": [
-      "Repas et boissons non mentionnés",
-      "Transport jusqu'au point de rencontre"
-    ],
+    "emoji": "👑",
+    "publicCible": "Adultes et adolescents (dès 8 ans)",
+    "notes": "Visite entièrement à pied. À faire de préférence par beau temps.",
+    "inclusions": ["Chasse au trésor royale (QR codes)", "Guide conférencier certifié"],
     "itinerarySteps": [
-      "Rendez-vous et présentation du guide",
-      "Début de la visite du quartier historique",
-      "Point culminant (ex: 2e étage Tour Eiffel ou Hall du Louvre)",
-      "Section 'Histoires Secrètes' et anecdotes",
-      "Conclusion et recommandations post-tour"
+      "Palais du Louvre (Pyramide de verre et ailes classiques)",
+      "Jardin des Tuileries (allées fleuries jusqu’à la Concorde)",
+      "Place Vendôme (luxe absolu et architecture parfaite)",
+      "Pont Neuf & Île de la Cité (fin face à la Seine)"
     ]
   },
   {
     "id": 2,
-    "name": "Montmartre Bohème: Artistes et Cabarets",
-    "tagline": "Flânez dans les ruelles secrètes de la colline des peintres.",
-    "description": "Découvrez l'âme artistique de Montmartre, de ses célèbres moulins aux ateliers cachés. Nous explorerons la Basilique du Sacré-Cœur et les lieux fréquentés par Picasso et Van Gogh, terminant par une dégustation surprise.",
-    "price": 42,
-    "duration": 180,
-    "rating": 4.8,
-    "theme": "Insolite & Secret",
-    "emoji": "🎨",
-    "guideIds": [2, 4, 6],
-    "reviews": [
-      { "name": "Sofia R.", "rating": 5, "text": "Une atmosphère magique, j'ai adoré l'histoire des cabarets." },
-      { "name": "Ahmed Z.", "rating": 4, "text": "Très authentique. Moins touristique que prévu, ce qui est génial." }
-    ],
-    "inclusions": [
-      "Billet coupe-file pour les monuments",
-      "Guide conférencier certifié",
-      "Petit groupe (max 12 personnes)"
-    ],
-    "exclusions": [
-      "Repas et boissons non mentionnés",
-      "Transport jusqu'au point de rencontre"
-    ],
+    "name": "2e Arrondissement — Les Passages Secrets",
+    "tagline": "Découvrez les passages couverts, lieux historiques, gourmands et au charme rétro.",
+    "description": "Une balade facile, parfaite même sous la pluie, pour explorer le charme rétro et l'histoire intimiste de Paris. Visitez des galeries sous verrière comme la Galerie Vivienne et terminez par une note gourmande sur la Rue Montorgueil.",
+    "price": 28,
+    "duration": 150,
+    "rating": 4.5,
+    "theme": "Historique & Rétro",
+    "emoji": "🗝️",
+    "publicCible": "Familles, seniors, couples, explorateurs",
+    "notes": "Marche facile. Idéal par temps de pluie grâce aux passages couverts.",
+    "inclusions": ["Guide local", "Plan des Passages", "Pauses gourmandes suggérées"],
     "itinerarySteps": [
-      "Rendez-vous et présentation du guide",
-      "Début de la visite du quartier historique",
-      "Point culminant (ex: 2e étage Tour Eiffel ou Hall du Louvre)",
-      "Section 'Histoires Secrètes' et anecdotes",
-      "Conclusion et recommandations post-tour"
+      "Palais Brongniart (Place de la Bourse)",
+      "Galerie Vivienne (élégance du XIXᵉ siècle sous verrière)",
+      "Passage des Panoramas (ambiance rétro et adresses confidentielles)",
+      "Rue Montorgueil (note gourmande et animée)"
     ]
   },
   {
     "id": 3,
-    "name": "Le Louvre: Chefs-d'œuvre Ciblés",
-    "tagline": "Visite accélérée pour les icônes: Joconde, Vénus de Milo et au-delà.",
-    "description": "Évitez la foule et concentrez-vous sur les pièces maîtresses du plus grand musée du monde. Notre historien de l'art vous révélera les secrets des œuvres les plus célèbres, de l'Antiquité aux grands maîtres européens. Billet coupe-file inclus.",
-    "price": 75,
-    "duration": 210,
-    "rating": 4.7,
-    "theme": "Art & Musées",
-    "emoji": "🖼️",
-    "guideIds": [1, 3, 5],
-    "reviews": [
-      { "name": "David H.", "rating": 5, "text": "Notre guide Sophie connaissait le musée par cœur. Un régal." },
-      { "name": "Anna M.", "rating": 4, "text": "Un peu long, mais on voit l'essentiel. Très instructif." }
-    ],
-    "inclusions": [
-      "Billet coupe-file pour les monuments",
-      "Guide conférencier certifié",
-      "Petit groupe (max 12 personnes)"
-    ],
-    "exclusions": [
-      "Repas et boissons non mentionnés",
-      "Transport jusqu'au point de rencontre"
-    ],
+    "name": "3e Arrondissement — L’Élégance Discrète du Haut Marais",
+    "tagline": "Le Paris Arty et chic: entre ateliers d'artisans, galeries et boutiques de créateurs.",
+    "description": "Un quartier qui allie savoir-faire, créativité et élégance discrète. Visitez le Marché des Enfants Rouges pour une pause gourmande et explorez les boutiques créateurs des Rues Charlot et Poitou. Le Petit Plus : Créer un « carnet des artisans » à faire tamponner.",
+    "price": 49,
+    "duration": 180,
+    "rating": 4.6,
+    "theme": "Artisanat & Design",
+    "emoji": "🎨",
+    "publicCible": "Couples 25–45 ans, Créatifs, Parisiens CSP+",
+    "motivations": ["Artisanat", "Boutiques créateurs", "Ambiance locale chic", "Spots photo esthétiques"],
+    "inclusions": ["Accès au Marché des Enfants Rouges", "Guide spécialisé en Art"],
     "itinerarySteps": [
-      "Rendez-vous et présentation du guide",
-      "Début de la visite du quartier historique",
-      "Point culminant (ex: 2e étage Tour Eiffel ou Hall du Louvre)",
-      "Section 'Histoires Secrètes' et anecdotes",
-      "Conclusion et recommandations post-tour"
+      "Musée des Arts et Métiers (curiosités)",
+      "Square du Temple - Elie Wiesel (havre de paix)",
+      "Rue de Bretagne & Marché des Enfants Rouges (dégustation)",
+      "Rue Charlot & Rue de Poitou (boutiques de créateurs et galeries)"
     ]
   },
   {
     "id": 4,
-    "name": "Île de la Cité: Racines de Paris",
-    "tagline": "Notre-Dame et la Sainte-Chapelle : le berceau médiéval de la ville.",
-    "description": "Explorez l'Île de la Cité, berceau de Paris, avec un regard privilégié sur le chantier de Notre-Dame. Visitez la Sainte-Chapelle, la Conciergerie et les vestiges des plus anciens remparts de la ville.",
-    "price": 45,
-    "duration": 165,
-    "rating": 4.6,
-    "theme": "Histoire & Architecture",
-    "emoji": "⛪",
-    "guideIds": [3, 4, 7],
-    "reviews": [],
-    "inclusions": [
-      "Billet coupe-file pour les monuments",
-      "Guide conférencier certifié",
-      "Petit groupe (max 12 personnes)"
-    ],
-    "exclusions": [
-      "Repas et boissons non mentionnés",
-      "Transport jusqu'au point de rencontre"
-    ],
+    "name": "4e Arrondissement — L’Âme Médiévale et Bohème (Marais / Île de la Cité)",
+    "tagline": "De Notre-Dame à la Place des Vosges, le cœur historique et vivant de Paris.",
+    "description": "L'alliance parfaite entre l'histoire médiévale et la vie artistique contemporaine. Idéal pour les culturels, les foodies et les romantiques. Finissez sur la majestueuse Place des Vosges.",
+    "price": 38,
+    "duration": 240,
+    "rating": 4.8,
+    "theme": "Historique & Culturel",
+    "emoji": "🏰",
+    "publicCible": "Culturel·le, Foodie, Flâneur·euse, Noctambule",
+    "inclusions": ["Visite des îlots de la Seine", "Plan détaillé du Marais"],
     "itinerarySteps": [
-      "Rendez-vous et présentation du guide",
-      "Début de la visite du quartier historique",
-      "Point culminant (ex: 2e étage Tour Eiffel ou Hall du Louvre)",
-      "Section 'Histoires Secrètes' et anecdotes",
-      "Conclusion et recommandations post-tour"
+      "Île Saint-Louis (flânerie paisible)",
+      "Île de la Cité & Notre-Dame (chef-d’œuvre gothique)",
+      "Hôtel de Ville (place majestueuse)",
+      "Rue des Barres (charme médiéval)",
+      "Place des Vosges (écrin de verdure)"
     ]
   },
   {
     "id": 5,
-    "name": "Marais Gourmand: Dégustations Secrètes",
-    "tagline": "Un circuit pédestre entre histoire et pauses gastronomiques (Falafel, Pâtisseries...).",
-    "description": "Le Marais est un quartier chargé d'histoire (Place des Vosges, Hôtels Particuliers) et réputé pour sa gastronomie. Ce tour est une exploration à pied ponctuée de 5 à 6 dégustations emblématiques.",
-    "price": 59,
+    "name": "5e Arrondissement — Le Quartier Latin, l’Esprit Éternel",
+    "tagline": "Le berceau intellectuel de Paris : Sorbonne, Panthéon et rues médiévales.",
+    "description": "Plongez dans l'ambiance intellectuelle, bohème et académique. Découvrez le Panthéon et flânez sur la Rue Mouffetard, au cœur de l'ambiance étudiante. Le Petit Plus : Participer à une soirée « lecture à la bougie » dans une librairie indépendante.",
+    "price": 35,
     "duration": 180,
-    "rating": 4.9,
-    "theme": "Gastronomie",
-    "emoji": "🥐",
-    "guideIds": [1, 2, 6],
-    "reviews": [],
-    "inclusions": [
-      "Billet coupe-file pour les monuments",
-      "Guide conférencier certifié",
-      "Petit groupe (max 12 personnes)"
-    ],
-    "exclusions": [
-      "Repas et boissons non mentionnés",
-      "Transport jusqu'au point de rencontre"
-    ],
+    "rating": 4.4,
+    "theme": "Littérature & Académique",
+    "emoji": "📚",
+    "publicCible": "Étudiants & jeunes actifs 18–30 ans, Amoureux de culture/histoire",
+    "motivations": ["Cafés littéraires", "Sorbonne", "Panthéon", "Flânerie dans les rues médiévales"],
+    "inclusions": ["Entrée aux Arènes de Lutèce", "Suggestions de librairies historiques"],
     "itinerarySteps": [
-      "Rendez-vous et présentation du guide",
-      "Début de la visite du quartier historique",
-      "Point culminant (ex: 2e étage Tour Eiffel ou Hall du Louvre)",
-      "Section 'Histoires Secrètes' et anecdotes",
-      "Conclusion et recommandations post-tour"
+      "Panthéon (vue sur Paris)",
+      "Rue Mouffetard (marché pittoresque, ambiance étudiante)",
+      "Arènes de Lutèce (vestiges romains)",
+      "Jardin des Plantes (Muséum d’Histoire Naturelle)"
     ]
   },
   {
     "id": 6,
-    "name": "Versailles: L'Opulence Royale",
-    "tagline": "Excursion complète d'une journée, Château, Galerie des Glaces et Jardins.",
-    "description": "Voyagez dans l'opulence de la monarchie française. Visitez les Grands Appartements, la légendaire Galerie des Glaces et les magnifiques jardins. Transport inclus depuis Paris.",
-    "price": 110,
-    "duration": 420,
-    "rating": 4.9,
-    "theme": "Histoire & Architecture",
-    "emoji": "👑",
-    "guideIds": [3, 5, 7],
-    "reviews": [],
-    "inclusions": [
-      "Billet coupe-file pour les monuments",
-      "Guide conférencier certifié",
-      "Petit groupe (max 12 personnes)"
-    ],
-    "exclusions": [
-      "Repas et boissons non mentionnés",
-      "Transport jusqu'au point de rencontre"
-    ],
+    "name": "6e Arrondissement — Saint-Germain-des-Prés, le Chic Littéraire",
+    "tagline": "Élégance, cafés mythiques et galeries d'art du cœur de la Rive Gauche.",
+    "description": "Le quartier des intellectuels et des gourmands. Visitez l'Église Saint-Germain-des-Prés, immortalisez votre pause aux Deux Magots et terminez par une balade poétique au Jardin du Luxembourg.",
+    "price": 48,
+    "duration": 150,
+    "rating": 4.7,
+    "theme": "Élégance & Littérature",
+    "emoji": "🖋️",
+    "publicCible": "N/A",
+    "inclusions": ["Guide spécialisé en histoire littéraire", "Accès au Jardin du Luxembourg"],
     "itinerarySteps": [
-      "Rendez-vous et présentation du guide",
-      "Début de la visite du quartier historique",
-      "Point culminant (ex: 2e étage Tour Eiffel ou Hall du Louvre)",
-      "Section 'Histoires Secrètes' et anecdotes",
-      "Conclusion et recommandations post-tour"
+      "Église Saint-Germain-des-Prés (cœur historique)",
+      "Les Deux Magots & Café de Flore (cafés emblématiques)",
+      "Jardin du Luxembourg (balade poétique)",
+      "Rue Bonaparte & Rue Jacob (galeries d’art et luxe discret)"
     ]
   },
   {
     "id": 7,
-    "name": "Passages Couverts: Luxe du 19e Siècle",
-    "tagline": "Les galeries marchandes cachées, parfaites pour une journée pluvieuse.",
-    "description": "Partez à la découverte des splendeurs cachées de Paris : les Passages Couverts. Ces galeries élégantes, ornées de verrières et de mosaïques, abritent des boutiques historiques et une atmosphère unique.",
-    "price": 35,
-    "duration": 120,
-    "rating": 4.7,
-    "theme": "Insolite & Secret",
-    "emoji": "🛍️",
-    "guideIds": [2, 4],
-    "reviews": [],
-    "inclusions": [
-      "Billet coupe-file pour les monuments",
-      "Guide conférencier certifié",
-      "Petit groupe (max 12 personnes)"
-    ],
-    "exclusions": [
-      "Repas et boissons non mentionnés",
-      "Transport jusqu'au point de rencontre"
-    ],
+    "name": "7e Arrondissement — Le Paris Monumental",
+    "tagline": "Tour Eiffel, Invalides et Musée d’Orsay : le luxe discret et les symboles nationaux.",
+    "description": "Un quartier prestigieux, symbole du pouvoir et de l'art. Profitez d'une vue imprenable sur la Tour Eiffel depuis le Champ-de-Mars et explorez le Musée d'Orsay. Le Petit Plus : Un pique-nique musical au crépuscule face à la Tour Eiffel.",
+    "price": 55,
+    "duration": 180,
+    "rating": 4.9,
+    "theme": "Prestige & Institutions",
+    "emoji": "🇫🇷",
+    "publicCible": "Couples 30–60 ans (budget élevé), Amateurs d’art/histoire",
+    "motivations": ["Shopping haut de gamme", "Photos prestige", "Jardins historiques"],
+    "inclusions": ["Guide certifié", "Spots photo exclusifs"],
     "itinerarySteps": [
-      "Rendez-vous et présentation du guide",
-      "Début de la visite du quartier historique",
-      "Point culminant (ex: 2e étage Tour Eiffel ou Hall du Louvre)",
-      "Section 'Histoires Secrètes' et anecdotes",
-      "Conclusion et recommandations post-tour"
+      "Tour Eiffel / Champs-de-Mars",
+      "Musée d’Orsay (extérieur)",
+      "Invalides (Dôme)",
+      "Rue de Grenelle / Bac (shopping haut de gamme)"
     ]
   },
   {
     "id": 8,
-    "name": "Musée d'Orsay: L'Ère Impressionniste",
-    "tagline": "Monet, Renoir et Van Gogh dans l'ancienne gare majestueuse.",
-    "description": "Découvrez les toiles lumineuses et révolutionnaires du mouvement impressionniste, abritées dans le cadre spectaculaire de l'ancienne gare. Ce tour se concentre sur les œuvres clés et le contexte historique.",
-    "price": 68,
-    "duration": 180,
-    "rating": 4.7,
-    "theme": "Art & Musées",
-    "emoji": "🕰️",
-    "guideIds": [1, 3],
-    "reviews": [],
-    "inclusions": [
-      "Billet coupe-file pour les monuments",
-      "Guide conférencier certifié",
-      "Petit groupe (max 12 personnes)"
-    ],
-    "exclusions": [
-      "Repas et boissons non mentionnés",
-      "Transport jusqu'au point de rencontre"
-    ],
+    "name": "8e Arrondissement — L’Élégance et le Luxe Parisien",
+    "tagline": "Haute couture, architecture impériale et balade emblématique sur les Champs-Élysées.",
+    "description": "Le quartier le plus brillant et raffiné de Paris. De l'Arc de Triomphe à l'Avenue Montaigne, plongez dans l'univers de la haute couture. Le Petit Plus : Une séance photo “Old Hollywood” au coucher du soleil sur les Champs.",
+    "price": 60,
+    "duration": 120,
+    "rating": 4.8,
+    "theme": "Luxe & Haute Couture",
+    "emoji": "💎",
+    "publicCible": "Couples 28–55 ans (budget élevé), Fashion lovers, Business travelers",
+    "motivations": ["Mode et haute couture (Avenue Montaigne)", "Photos 'Old Hollywood'", "Restaurants & cafés iconiques"],
+    "inclusions": ["Guide styliste (sur demande)", "Itinéraire shopping de luxe"],
     "itinerarySteps": [
-      "Rendez-vous et présentation du guide",
-      "Début de la visite du quartier historique",
-      "Point culminant (ex: 2e étage Tour Eiffel ou Hall du Louvre)",
-      "Section 'Histoires Secrètes' et anecdotes",
-      "Conclusion et recommandations post-tour"
+      "Champs-Élysées & Arc de Triomphe (balade emblématique)",
+      "Avenue Montaigne (mode, haute couture)",
+      "Place de la Concorde (histoire et perspectives)",
+      "Parc Monceau (havre romantique)"
     ]
   },
   {
     "id": 9,
-    "name": "Père Lachaise: Histoires de Légendes",
-    "tagline": "Une promenade dans le cimetière le plus visité (Wilde, Piaf, Morrison).",
-    "description": "Venez écouter les récits de vies exceptionnelles. Ce lieu est un musée d'art funéraire et un témoignage de l'histoire de France, raconté avec respect et passion par votre guide.",
-    "price": 39,
-    "duration": 120,
-    "rating": 4.6,
-    "theme": "Insolite & Secret",
-    "emoji": "⚰️",
-    "guideIds": [2, 7],
-    "reviews": [],
-    "inclusions": [
-      "Billet coupe-file pour les monuments",
-      "Guide conférencier certifié",
-      "Petit groupe (max 12 personnes)"
-    ],
-    "exclusions": [
-      "Repas et boissons non mentionnés",
-      "Transport jusqu'au point de rencontre"
-    ],
+    "name": "9e Arrondissement — La Scène Parisienne",
+    "tagline": "Opéra Garnier, grands magasins et cabarets : l'âme théâtrale de Paris.",
+    "description": "Un arrondissement musical et commerçant. Admirez l'Opéra Garnier (extérieur) et profitez d'une vue panoramique depuis les Galeries Lafayette. Le Petit Plus : Un mini « Opéra Flash Mob » organisé sur les marches de Garnier.",
+    "price": 30,
+    "duration": 150,
+    "rating": 4.3,
+    "theme": "Théâtre & Shopping",
+    "emoji": "🎭",
+    "publicCible": "N/A",
+    "inclusions": ["Guide local", "Conseils shopping et théâtres"],
     "itinerarySteps": [
-      "Rendez-vous et présentation du guide",
-      "Début de la visite du quartier historique",
-      "Point culminant (ex: 2e étage Tour Eiffel ou Hall du Louvre)",
-      "Section 'Histoires Secrètes' et anecdotes",
-      "Conclusion et recommandations post-tour"
+      "Opéra Garnier (grand escalier, plafond de Chagall)",
+      "Galeries Lafayette & Printemps (shopping et vue panoramique)",
+      "Rue des Martyrs (adresses gourmandes et boutiques de quartier)",
+      "Folies Bergère (Paris des cabarets)"
     ]
   },
   {
     "id": 10,
-    "name": "Atelier Macarons Parisien",
-    "tagline": "Un cours de pâtisserie intensif avec un chef pour maîtriser le Macaron.",
-    "description": "Mettez la main à la pâte ! Ce cours de 2 heures vous apprendra toutes les techniques pour réussir les coques et les ganaches. Repartez avec vos propres créations.",
-    "price": 95,
-    "duration": 120,
-    "rating": 4.9,
-    "theme": "Gastronomie",
-    "emoji": "👨‍🍳",
-    "guideIds": [6, 10],
-    "reviews": [],
-    "inclusions": [
-      "Billet coupe-file pour les monuments",
-      "Guide conférencier certifié",
-      "Petit groupe (max 12 personnes)"
-    ],
-    "exclusions": [
-      "Repas et boissons non mentionnés",
-      "Transport jusqu'au point de rencontre"
-    ],
+    "name": "10e Arrondissement — Le Paris des Canaux",
+    "tagline": "Créatif, populaire et multiculturel : les quais animés du Canal Saint-Martin.",
+    "description": "Flânez au bord de l'eau le long du Canal Saint-Martin. Découvrez les saveurs exotiques du Passage Brady (Mini Inde) et les cafés alternatifs des Rues de Lancry et des Vinaigriers. Le Petit Plus : Un atelier dessin sur les quais du canal.",
+    "price": 25,
+    "duration": 180,
+    "rating": 4.2,
+    "theme": "Créatif & Multiculturel",
+    "emoji": "🛶",
+    "publicCible": "N/A",
+    "inclusions": ["Guide local", "Plan des péniches et écluses"],
     "itinerarySteps": [
-      "Rendez-vous et présentation du guide",
-      "Début de la visite du quartier historique",
-      "Point culminant (ex: 2e étage Tour Eiffel ou Hall du Louvre)",
-      "Section 'Histoires Secrètes' et anecdotes",
-      "Conclusion et recommandations post-tour"
+      "Canal Saint-Martin (flânerie au fil de l’eau)",
+      "Passage Brady (Mini Inde)",
+      "Rue de Lancry & Rue des Vinaigriers (cafés alternatifs et boutiques éthiques)"
     ]
   },
   {
     "id": 11,
-    "name": "L'Opéra Garnier: Splendeur Architecturale",
-    "tagline": "Découvrez la loge de l'Opéra et l'histoire du Fantôme de l'Opéra.",
-    "description": "Une visite fascinante du chef-d'œuvre de Charles Garnier, mélangeant baroque et néoclassicisme. Admirez le Grand Escalier, le Foyer de la Danse et la célèbre peinture de Chagall au plafond.",
-    "price": 40,
-    "duration": 100,
-    "rating": 4.8,
-    "theme": "Histoire & Architecture",
-    "emoji": "🎭",
-    "guideIds": [4, 9],
-    "reviews": [],
-    "inclusions": [
-      "Billet coupe-file pour les monuments",
-      "Guide conférencier certifié",
-      "Petit groupe (max 12 personnes)"
-    ],
-    "exclusions": [
-      "Repas et boissons non mentionnés",
-      "Transport jusqu'au point de rencontre"
-    ],
+    "name": "11e Arrondissement — L’Énergie Urbaine",
+    "tagline": "Festif, engagé et moderne : le cœur vibrant du Street Art et des bars.",
+    "description": "Un parcours vivant, parfois bruyant, axé sur l'énergie urbaine et l'ambiance nocturne. Découvrez la Place de la République, le Street art de la Rue Oberkampf et le Marché Popincourt. Le Petit Plus : Une balade guidée de street art avec un artiste local.",
+    "price": 35,
+    "duration": 180,
+    "rating": 4.4,
+    "theme": "Urbain & Festif",
+    "emoji": "💥",
+    "publicCible": "Adultes (déconseillé aux jeunes enfants le soir)",
+    "notes": "Parcours très vivant, ambiance nocturne possible.",
+    "inclusions": ["Guide spécialisé en Street Art", "Recommandations de bars/concerts"],
     "itinerarySteps": [
-      "Rendez-vous et présentation du guide",
-      "Début de la visite du quartier historique",
-      "Point culminant (ex: 2e étage Tour Eiffel ou Hall du Louvre)",
-      "Section 'Histoires Secrètes' et anecdotes",
-      "Conclusion et recommandations post-tour"
+      "Place de la République (point de rassemblement et de liberté)",
+      "Rue Oberkampf (Street art, bars et concerts live)",
+      "Marché Popincourt (saveurs locales)"
     ]
   },
   {
     "id": 12,
-    "name": "Street Art de Belleville",
-    "tagline": "Le Paris alternatif : graffitis, fresques et culture urbaine.",
-    "description": "Loin des circuits classiques, explorez les murs de Belleville, l'un des hauts lieux du street art parisien. Votre guide, un artiste local, vous décryptera les œuvres et leur message.",
-    "price": 30,
-    "duration": 150,
-    "rating": 4.5,
-    "theme": "Insolite & Secret",
-    "emoji": "🖌️",
-    "guideIds": [8, 9],
-    "reviews": [],
-    "inclusions": [
-      "Billet coupe-file pour les monuments",
-      "Guide conférencier certifié",
-      "Petit groupe (max 12 personnes)"
-    ],
-    "exclusions": [
-      "Repas et boissons non mentionnés",
-      "Transport jusqu'au point de rencontre"
-    ],
+    "name": "12e Arrondissement — Nature et Mouvement",
+    "tagline": "La Coulée Verte, le marché d’Aligre et les parcs : un Paris paisible et familial.",
+    "description": "Découvrez le Paris vert et paisible. Baladez-vous sur la Promenade Plantée (Coulée Verte), le jardin suspendu, et explorez le marché typiquement parisien d'Aligre. Idéal pour une journée calme et en extérieur. Le Petit Plus : Un pique-nique zéro déchet dans le parc.",
+    "price": 29,
+    "duration": 180,
+    "rating": 4.6,
+    "theme": "Nature & Famille",
+    "emoji": "🌳",
+    "publicCible": "Familles, Amateurs de nature",
+    "inclusions": ["Guide local", "Suggestions de produits locaux au marché"],
     "itinerarySteps": [
-      "Rendez-vous et présentation du guide",
-      "Début de la visite du quartier historique",
-      "Point culminant (ex: 2e étage Tour Eiffel ou Hall du Louvre)",
-      "Section 'Histoires Secrètes' et anecdotes",
-      "Conclusion et recommandations post-tour"
+      "Promenade Plantée (Coulée Verte)",
+      "Marché d’Aligre (marché typiquement parisien)",
+      "Parc de Bercy & Accor Arena (balades au bord de Seine)"
     ]
   },
   {
     "id": 13,
-    "name": "Catacombes de Paris: Histoires Souterraines",
-    "tagline": "Une descente dans les profondeurs pour un aperçu macabre de l'histoire.",
-    "description": "Visite unique des célèbres ossuaires, abritant les restes de six millions de Parisiens. Billet coupe-file inclus, essentiel pour cette attraction très demandée. Attention, le tour n'est pas adapté aux claustrophobes.",
-    "price": 65,
-    "duration": 90,
+    "name": "13e Arrondissement — Street Art & Modernité",
+    "tagline": "Des fresques monumentales de Street Art au charme du village de la Butte-aux-Cailles.",
+    "description": "Un arrondissement urbain, coloré et multiculturel. Idéal pour les Street photographers grâce aux fresques XXL du Boulevard Vincent Auriol. Découvrez aussi le charme caché de la Butte-aux-Cailles. Le Petit Plus : Participer à une fresque collective.",
+    "price": 32,
+    "duration": 180,
     "rating": 4.7,
-    "theme": "Insolite & Secret",
-    "emoji": "💀",
-    "guideIds": [7, 8],
-    "reviews": [],
-    "inclusions": [
-      "Billet coupe-file pour les monuments",
-      "Guide conférencier certifié",
-      "Petit groupe (max 12 personnes)"
-    ],
-    "exclusions": [
-      "Repas et boissons non mentionnés",
-      "Transport jusqu'au point de rencontre"
-    ],
+    "theme": "Street Art & Urbain",
+    "emoji": "🖌️",
+    "publicCible": "Jeunes adultes / étudiants 18–30 ans, Street photographers",
+    "motivations": ["Street art XXL", "Exploration urbaine", "Multiculturalité"],
+    "inclusions": ["Guide photographe", "Carte des fresques emblématiques"],
     "itinerarySteps": [
-      "Rendez-vous et présentation du guide",
-      "Début de la visite du quartier historique",
-      "Point culminant (ex: 2e étage Tour Eiffel ou Hall du Louvre)",
-      "Section 'Histoires Secrètes' et anecdotes",
-      "Conclusion et recommandations post-tour"
+      "Butte-aux-Cailles (village secret)",
+      "Boulevard Vincent Auriol (fresques monumentales de street art)",
+      "Bibliothèque François-Mitterrand (architecture moderne)"
     ]
   },
   {
     "id": 14,
-    "name": "Quartier Latin: La Sorbonne et les Intellectuels",
-    "tagline": "Sur les traces des étudiants, des philosophes et des librairies mythiques.",
-    "description": "Explorez le cœur intellectuel de Paris. De la Sorbonne au Panthéon, en passant par les librairies de la Rue des Écoles, ce tour est une plongée dans l'histoire de l'éducation et de la pensée française.",
-    "price": 38,
-    "duration": 150,
-    "rating": 4.6,
-    "theme": "Histoire & Architecture",
-    "emoji": "🎓",
-    "guideIds": [1, 10],
-    "reviews": [],
-    "inclusions": [
-      "Billet coupe-file pour les monuments",
-      "Guide conférencier certifié",
-      "Petit groupe (max 12 personnes)"
-    ],
-    "exclusions": [
-      "Repas et boissons non mentionnés",
-      "Transport jusqu'au point de rencontre"
-    ],
+    "name": "14e Arrondissement — L’Esprit Rive Gauche (Montparnasse)",
+    "tagline": "Littéraire, tranquille et introspectif : de la Cité Universitaire aux Catacombes.",
+    "description": "Le Paris littéraire et contemplatif. Voyagez dans les entrailles de la ville aux Catacombes, puis remontez pour explorer la Cité Universitaire et les cafés d’artistes de Montparnasse. Le Petit Plus : Un atelier d’écriture dans un café historique du quartier.",
+    "price": 39,
+    "duration": 180,
+    "rating": 4.5,
+    "theme": "Introspectif & Historique",
+    "emoji": "🧠",
+    "publicCible": "Chill, Artiste bohème, Cinéphile, Gourmet",
+    "inclusions": ["Guide conférencier", "Suggestions de crêperies traditionnelles"],
     "itinerarySteps": [
-      "Rendez-vous et présentation du guide",
-      "Début de la visite du quartier historique",
-      "Point culminant (ex: 2e étage Tour Eiffel ou Hall du Louvre)",
-      "Section 'Histoires Secrètes' et anecdotes",
-      "Conclusion et recommandations post-tour"
+      "Catacombes de Paris (voyage dans les entrailles de la ville) - Billet non inclus",
+      "Cité Universitaire (pavillons du monde entier)",
+      "Montparnasse (cafés d’artistes et tour panoramique)"
     ]
   },
   {
     "id": 15,
-    "name": "Dégustation de Vins et Fromages",
-    "tagline": "Initiation aux accords classiques français par un sommelier professionnel.",
-    "description": "Une session de 2 heures dans une cave voûtée du 5e arrondissement. Vous dégusterez 4 vins différents (Bordeaux, Bourgogne, Loire...) accompagnés de 4 fromages artisanaux.",
-    "price": 79,
+    "name": "15e Arrondissement — Le Paris Résidentiel et Authentique",
+    "tagline": "Familiale, sécurisée et paisible : les parcs et le lifestyle local.",
+    "description": "Un arrondissement douillet et très sécurisé, parfait pour les familles et ceux qui cherchent le 'local lifestyle'. Profitez du Parc André Citroën et flânez dans les boutiques de la Rue du Commerce. Le Petit Plus : Un vol captif en ballon pour une vue aérienne de Paris.",
+    "price": 30,
     "duration": 120,
-    "rating": 4.9,
-    "theme": "Gastronomie",
-    "emoji": "🍷",
-    "guideIds": [2, 6],
-    "reviews": [],
-    "inclusions": [
-      "Billet coupe-file pour les monuments",
-      "Guide conférencier certifié",
-      "Petit groupe (max 12 personnes)"
-    ],
-    "exclusions": [
-      "Repas et boissons non mentionnés",
-      "Transport jusqu'au point de rencontre"
-    ],
+    "rating": 4.3,
+    "theme": "Résidentiel & Familial",
+    "emoji": "🏡",
+    "publicCible": "Familles 30–50 ans, Seniors actifs, Voyageurs 'local lifestyle'",
+    "motivations": ["Grands parcs", "Ambiance résidentielle", "Belle vue sur la Tour Eiffel"],
+    "inclusions": ["Guide local", "Accès au Parc André Citroën"],
     "itinerarySteps": [
-      "Rendez-vous et présentation du guide",
-      "Début de la visite du quartier historique",
-      "Point culminant (ex: 2e étage Tour Eiffel ou Hall du Louvre)",
-      "Section 'Histoires Secrètes' et anecdotes",
-      "Conclusion et recommandations post-tour"
+      "Parc André Citroën (montgolfières)",
+      "Rue du Commerce (shopping et vie de quartier)",
+      "Musée Bourdelle (sculptures monumentales)"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "16e Arrondissement — Élégance et Sérénité",
+    "tagline": "Trocadéro, Bois de Boulogne et musées impressionnistes : le Paris raffiné.",
+    "description": "Le quartier chic, vert et raffiné. Profitez de la vue iconique sur la Tour Eiffel depuis le Trocadéro et plongez dans l'impressionnisme au Musée Marmottan-Monet. Une échappée belle dans la sérénité du Bois de Boulogne. Le Petit Plus : Une balade en barque sur le lac.",
+    "price": 50,
+    "duration": 180,
+    "rating": 4.5,
+    "theme": "Chic & Nature",
+    "emoji": "🦢",
+    "publicCible": "N/A",
+    "inclusions": ["Guide local", "Itinéraire du Bois de Boulogne"],
+    "itinerarySteps": [
+      "Trocadéro (vue iconique sur la Tour Eiffel)",
+      "Musée Marmottan-Monet (impressionnisme - extérieur)",
+      "Bois de Boulogne (nature, lacs et jardins secrets)"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "17e Arrondissement — L’Équilibre entre Tradition et Modernité",
+    "tagline": "Le quartier-village des Batignolles : familial, paisible et en plein essor.",
+    "description": "Découvrez le charme du quartier-village des Batignolles, un lieu familial, paisible et peu touristique. Idéal pour les jeunes actifs recherchant un 'lifestyle équilibré', avec ses cafés indépendants et ses brunchs cosy.",
+    "price": 35,
+    "duration": 120,
+    "rating": 4.2,
+    "theme": "Quartier-Village & Local",
+    "emoji": "🏘️",
+    "publicCible": "Jeunes actifs 25–40 ans (lifestyle équilibré), Voyageurs Low-Tourist",
+    "motivations": ["Cafés indépendants & brunchs cosy", "Ambiance village", "Architecture haussmannienne"],
+    "inclusions": ["Guide local", "Recommandations de brunchs"],
+    "itinerarySteps": [
+      "Batignolles (quartier village et parc charmant)",
+      "Place de Clichy (énergie cosmopolite)",
+      "Boulevard des Courcelles (architecture haussmannienne)"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "18e Arrondissement — Montmartre et la Bohème Éternelle",
+    "tagline": "Artistique, romantique et panoramique : le Paris de la carte postale.",
+    "description": "L'un des quartiers les plus emblématiques. Montez à la Basilique du Sacré-Cœur pour une vue sublime, admirez les artistes de la Place du Tertre et descendez vers l'ambiance cabaret du Moulin Rouge. Le Petit Plus : Un portrait de vous réalisé sur place par un artiste montmartrois.",
+    "price": 40,
+    "duration": 180,
+    "rating": 4.9,
+    "theme": "Artistique & Romantique",
+    "emoji": "🌹",
+    "publicCible": "Couples 20–45 ans, Street photographers, Touristes internationaux",
+    "motivations": ["Vues panoramiques", "Culture, histoire et glamour parisien"],
+    "inclusions": ["Guide local et historien d'art", "Itinéraire romantique"],
+    "itinerarySteps": [
+      "Basilique du Sacré-Cœur (vue sublime)",
+      "Place du Tertre (peintres et caricaturistes)",
+      "Rue Lepic & Moulin Rouge (ambiance cabaret et cinéma)"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "19e Arrondissement — Le Paris Nature et Populaire",
+    "tagline": "Parc des Buttes-Chaumont et Canal de l’Ourcq : l'évasion en plein air.",
+    "description": "Un arrondissement axé sur la nature, idéal pour les familles et les activités en plein air. Découvrez les paysages vallonnés du Parc des Buttes-Chaumont et les péniches du Canal de l'Ourcq. Le Petit Plus : Une balade en bateau électrique sur le canal.",
+    "price": 28,
+    "duration": 180,
+    "rating": 4.1,
+    "theme": "Nature & Plein Air",
+    "emoji": "🌿",
+    "publicCible": "Familles, Amateurs de nature",
+    "inclusions": ["Guide local", "Plan du Parc des Buttes-Chaumont"],
+    "itinerarySteps": [
+      "Parc des Buttes-Chaumont (collines, grottes et lacs)",
+      "Cité des Sciences (curiosités et expositions - extérieur)",
+      "Canal de l’Ourcq (piste cyclable et péniches)"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "20e Arrondissement — Le Paris des Artistes et des Mémoires",
+    "tagline": "Père-Lachaise, Belleville et les ateliers : créatif, cosmopolite et libre.",
+    "description": "Un arrondissement à l'ambiance libre et cosmopolite. Explorez les allées poétiques du cimetière Père-Lachaise (sépultures mythiques) et profitez d'une vue panoramique depuis Belleville. Le Petit Plus : Une visite nocturne contée du Père-Lachaise à la lanterne.",
+    "price": 35,
+    "duration": 240,
+    "rating": 4.5,
+    "theme": "Mémoire & Créativité",
+    "emoji": "👻",
+    "publicCible": "N/A",
+    "inclusions": ["Guide spécialisé en histoire du 20e", "Itinéraire street art de Ménilmontant"],
+    "itinerarySteps": [
+      "Père-Lachaise (cimetière mythique et jardin poétique)",
+      "Rue de Ménilmontant (street art et cafés bohèmes)",
+      "Belleville (vue panoramique depuis le parc et ateliers d’artistes)"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Activité Spéciale : Le Tour des Rues du Monopoly Français",
+    "tagline": "Une balade ludique et insolite à travers les rues mythiques du célèbre jeu de société parisien.",
+    "description": "Une balade insolite et ludique à travers les rues du Monopoly français. De Belleville à la Rue de la Paix, découvrez l'histoire et les anecdotes de ces adresses mythiques. Nombreux spots photo et ambiance fun garantie!",
+    "price": 32,
+    "duration": 240,
+    "rating": 4.7,
+    "theme": "Insolite & Fun",
+    "emoji": "🎲",
+    "publicCible": "Amis, couples, explorateurs",
+    "notes": "Marche longue mais facile. Top par beau temps.",
+    "inclusions": ["Carte du parcours Monopoly", "Guide conférencier certifié", "Petit groupe (max 12 personnes)"],
+    "exclusions": ["Transport", "Repas et boissons"],
+    "itinerarySteps": [
+      "Boulevard de Belleville → Rue Lecourbe (Marron)",
+      "Rue de Vaugirard → Rue de Courcelles → Avenue de la République (Bleu clair)",
+      "Boulevard de la Villette → Avenue de Neuilly → Rue de Paradis (Rose)",
+      "Avenue Mozart → Boulevard Saint-Michel → Place Pigalle (Orange)",
+      "Avenue Matignon → Boulevard Malesherbes → Avenue Henri-Martin (Rouge)",
+      "Faubourg Saint-Honoré → Place de la Bourse → Rue Lafayette (Jaune)",
+      "Avenue Foch → Boulevard des Capucines → Avenue des Champs-Élysées (Vert)",
+      "Rue de la Paix (Bleu foncé)"
     ]
   }
 ]

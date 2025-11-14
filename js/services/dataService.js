@@ -1,8 +1,7 @@
-import { STATIC_TOURS, STATIC_GUIDES, STATIC_NEWS } from './staticData.js';
+import { STATIC_GUIDES, STATIC_NEWS } from './staticData.js';
 
 const cache = new Map();
 const STATIC_DATA_BY_PATH = {
-    'data/tours.json': STATIC_TOURS,
     'data/guides.json': STATIC_GUIDES,
     'data/news.json': STATIC_NEWS
 };
@@ -54,8 +53,17 @@ export async function getGuideById(id) {
 }
 
 export async function getToursForGuide(guideId) {
-    const tours = await loadTours();
-    return tours.filter((tour) => tour.guideIds.includes(guideId));
+    const [tours, guides] = await Promise.all([loadTours(), loadGuides()]);
+    const guide = guides.find((item) => item.id === guideId);
+    if (!guide) {
+        return [];
+    }
+
+    if (guide.tourIds?.length) {
+        return tours.filter((tour) => guide.tourIds.includes(tour.id));
+    }
+
+    return tours.filter((tour) => tour.guideIds?.includes(guideId));
 }
 
 export async function getGuidesForTour(tourId) {
@@ -64,5 +72,12 @@ export async function getGuidesForTour(tourId) {
     if (!tour) {
         return [];
     }
-    return guides.filter((guide) => tour.guideIds.includes(guide.id));
+
+    const guideIdsFromTour = tour.guideIds || [];
+    return guides.filter((guide) => {
+        if (guide.tourIds?.length) {
+            return guide.tourIds.includes(tourId);
+        }
+        return guideIdsFromTour.includes(guide.id);
+    });
 }

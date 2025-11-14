@@ -32,17 +32,21 @@ function renderTour(tour) {
     if (duration) duration.textContent = `Durée estimée: ${formatDuration(tour.duration)}`;
 
     if (itinerary) {
-        itinerary.innerHTML = tour.itinerarySteps
-            .map((step) => `<div class="itinerary-item"><strong>${step}</strong></div>`)
-            .join('');
+        itinerary.innerHTML = tour.itinerarySteps && tour.itinerarySteps.length
+            ? tour.itinerarySteps.map((step) => `<div class="itinerary-item"><strong>${step}</strong></div>`).join('')
+            : '<p>Itinéraire non disponible</p>';
     }
 
     if (inclusions) {
-        inclusions.innerHTML = tour.inclusions.map((item) => `<li>${item}</li>`).join('');
+        inclusions.innerHTML = tour.inclusions && tour.inclusions.length
+            ? tour.inclusions.map((item) => `<li>${item}</li>`).join('')
+            : '<li>Aucune inclusion spécifiée</li>';
     }
 
     if (exclusions) {
-        exclusions.innerHTML = tour.exclusions.map((item) => `<li>${item}</li>`).join('');
+        exclusions.innerHTML = tour.exclusions && tour.exclusions.length
+            ? tour.exclusions.map((item) => `<li>${item}</li>`).join('')
+            : '<li>Aucune exclusion spécifiée</li>';
     }
 
     if (reviewCount) {
